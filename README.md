@@ -3,18 +3,17 @@
 ## Build
 
 ```
-docker buildx build --tag enroot:2204 .
+docker buildx build --tag enroot:3.5.0-bookworm .
 ```
 
 ## Run
 
 ```
 docker run \
-    -it \
     --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    --mount type=bind,source=</host/path/to/workspace,target=/workspace \
-    enroot:2204 \
+    --mount type=bind,source=</host/path/to/workspace>,target=/workspace \
+    enroot:3.5.0-bookworm \
         -o alpine.sqsh \
         dockerd://alpine:latest
 ```
