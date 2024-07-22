@@ -37,5 +37,6 @@ RUN set -eux; \
     rm -rf ./*.deb
 
 WORKDIR /workspace
+ENV DOCKER_DEFAULT_PLATFORM=linux/amd64
 ENTRYPOINT ["enroot", "import"]
 
