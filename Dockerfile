@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM --platform=linux/amd64 debian:bookworm-slim
 
 RUN set -eux; \
     apt-get update; \
